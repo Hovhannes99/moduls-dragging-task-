@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@appTypes": ["types"],
+      "@appTypes/*": ["types/*"],
+      "@assets": ["assets/"],
+      "@assets/*": ["assets/*"],
+      "@contexts": ["contexts"],
+      "@contexts/*": ["contexts/*"],
+      "@collections": ["collections"],
+      "@collections/*": ["collections/*"]
+    }
+  }
+}
