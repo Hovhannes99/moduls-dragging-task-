@@ -18,8 +18,7 @@ const enable = {
 }
 
 const Board = () => {
-  const { items } = useContext(MainContext)
-  const { setItems } = useContext(MainContext)
+  const { items, setItems } = useContext(MainContext)
 
   return (
         <div
@@ -59,7 +58,7 @@ const Board = () => {
                       e.stopImmediatePropagation()
                     }}
                     onDragStop={(e,d) => {
-                      setItems(items.map((current:MovableItem) => {
+                      setItems((oldItems:MovableItem[]) => oldItems?.map((current:MovableItem) => {
                         if (current.id === item.id) {
                           return { ...item, x: d.x, y: d.y, id: item.id }
                         }

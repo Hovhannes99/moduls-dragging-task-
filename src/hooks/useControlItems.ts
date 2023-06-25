@@ -19,7 +19,7 @@ const useControlItems = () => {
   }
 
   const removeItems = () => {
-    localStorage.removeItem("data")
+    localStorage.setItem("data", JSON.stringify([]))
     setItems([])
   }
 
